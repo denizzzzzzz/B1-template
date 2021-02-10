@@ -48,6 +48,16 @@ header{
   margin: 0 auto;
   width: 512px;
 }
+@media (max-width: 480px){
+.hidden-on-lg{
+  display: block;
+}
+.hidden-on-sm{
+  display: none;
+}
+}
+
+
 
 h1{
   margin: 0;
@@ -62,8 +72,7 @@ h1{
 }
 
 h2{
-  border-left: 5px solid #27AE60;
-  padding-left: 10px;
+  
 }
 
 main{
@@ -100,7 +109,6 @@ article{
 article:last-of-type{
   margin-right: 0;
 }
-
 article h2{
   margin: 0;
   padding: 1.5em;
@@ -108,6 +116,12 @@ article h2{
   background-position: center;
   background-size: cover;
   text-align: center;
+  text-shadow:   
+  0 0 0 #FCFCFC,      
+ -1px -1px 0 #FCFCFC,         
+ 1px -1px 0 #FCFCFC,      
+  -1px 1px 0 #FCFCFC,      
+   1px 1px 0 #FCFCFC; 
 }
 article h2.fun-for-family{
   background-image: url('../images/family-fun-george-arthur-pflueger.jpg');
@@ -131,7 +145,10 @@ article h2.open-forever{
 .product:last-of-type{
   margin-right: 0;
 }
-
+.row{
+display:flex;
+align-items: left-to-right;
+}
 .product span{
   display: block;
 }
@@ -141,6 +158,7 @@ article h2.open-forever{
   margin: 0 auto;
 }
 
+
 button{
   width: 100%;
   margin-top: 1em;
@@ -149,7 +167,13 @@ button{
   border: 2px solid #FCFCFC;
   color: #000000;
   font-weight: bold;
+  cursor: pointer
+
 }
+
+  
+
+
 
 .payment-option{
   height: 64px;
@@ -172,12 +196,22 @@ footer{
   text-align: center;
 }
 
-.hidden-on-lg{
-  display: none;
+.emphasize{
+ border-left: 5px solid #27AE60;
+ box-shadow:  0px 0px 5px #27AE60;
+ padding:1em;
 }
-.hidden-on-sm{
-  display: block;
+.emphasize h2{
+  margin:0px;
+  border-left: 0px;
+  text-align: center;
+ 
+
 }
+
+
+
+
 
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -185,9 +219,7 @@ footer{
   Bron: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
 */
 
-@media (max-width: 480px) {
 
-}
 
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -199,15 +231,13 @@ footer{
     margin: 0 auto;
     width: 256px;
   }
-
-  .row{
-    flex-direction: column;
-  }
   .sidy-by-side{
     flex-direction: column;
     align-items: center;
   }
-}
+
+  
+
 
 /*
   help! Het lettertype wordt om een of andere reden niet goed geladen... Misschien heeft het iets met het pad naar de fonts te maken?
@@ -252,3 +282,4 @@ to   { opacity: 1; }
 from { opacity: 0; }
 to   { opacity: 1; }
 }
+
